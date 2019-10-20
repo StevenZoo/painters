@@ -1,0 +1,35 @@
+{
+  "name": "painters",
+  "version": "0.0.1",
+  "description": "Browser-based paint app",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "sass": "^1.23.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2",
+    "webpack-merge": "^4.2.2"
+  },
+  "scripts": {
+    "build:dev": "webpack --config webpack.dev.js && npm run sass:dev",
+    "build:prod": "webpack --config webpack.prod.js && npm run sass:prod && npm run copy:html",
+    "sass:dev": "sass src/sass/style.scss src/style.css",
+    "sass:prod": "sass src/sass/style.scss > dist/style.css",
+    "sass:watch": "sass --watch src/sass/style.scss src/style.css",
+    "copy:html": "cp src/index.html dist/index.html",
+    "develop": "npm run build:dev && webpack-dev-server --config webpack.dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StevenZoo/painters.git"
+  },
+  "author": "Steven Xu",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/StevenZoo/painters/issues"
+  },
+  "homepage": "https://github.com/StevenZoo/painters#readme"
+}
