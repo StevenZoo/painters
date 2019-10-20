@@ -1,0 +1,65 @@
+#mobile-color-result {
+  margin-top: 18px;
+  height: 30px;
+  width: 30px;
+}
+
+#color-result {
+  margin-top: 18px;
+  height: 180px;
+  width: 100%;
+}
+
+.gradient {
+  height: 16px;
+  margin: 4px 0 6px 0;
+}
+
+.hue-gradient {
+  height: 24px;
+  background: linear-gradient(
+    to right,
+    hsl(0, 80%, 60%),
+    hsl(15, 80%, 60%),
+    hsl(30, 80%, 60%),
+    hsl(45, 80%, 60%),
+    hsl(60, 80%, 60%),
+    hsl(75, 80%, 60%),
+    hsl(90, 80%, 60%),
+    hsl(105, 80%, 60%),
+    hsl(120, 80%, 60%),
+    hsl(135, 80%, 60%),
+    hsl(150, 80%, 60%),
+    hsl(165, 80%, 60%),
+    hsl(180, 80%, 60%),
+    hsl(195, 80%, 60%),
+    hsl(210, 80%, 60%),
+    hsl(225, 80%, 60%),
+    hsl(240, 80%, 60%),
+    hsl(255, 80%, 60%),
+    hsl(270, 80%, 60%),
+    hsl(285, 80%, 60%),
+    hsl(300, 80%, 60%),
+    hsl(315, 80%, 60%),
+    hsl(330, 80%, 60%),
+    hsl(345, 80%, 60%),
+    hsl(360, 80%, 60%)
+  );
+}
+
+@media (max-height: $tablet-breakpoint) {
+  #color-result {
+    height: 140px;
+    width: 140px;
+    margin: 12px auto 0;
+  }
+
+  .gradient {
+    height: 12px;
+    margin: 4px 0;
+  }
+
+  .hue-gradient {
+    height: 18px;
+  }
+}

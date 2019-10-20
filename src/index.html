@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="sidebar-container" class="minified">
+        <div id="sidebar-anchor">
+          <div id="hamburger-icon-container" class="icon-container">
+            <div class="hamburger-icon">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="mobile-color-picker">
+            <div class="mobile-hue-slider-wrapper">
+              <input id="mobile-hue-range-slider" type="range" min="0" max="360" />
+            </div>
+            <div id="mobile-color-result"></div>
+          </div>
+        </div>
+        <div id="sidebar-content">
+          <div id="close-arrow-container">
+            <div class="icon-container">
+              <div id="close-arrow-icon"></div>
+            </div>
+          </div>
+          <div class="sidebar-core-content">
+            <div class="section tool-section">
+              <h3>Tools</h3>
+              <div class="row tools">
+                <button id="brush" class="tool">Brush</button>
+                <button id="eraser" class="tool">Eraser</button>
+              </div>
+            </div>
+            <div class="section">
+              <h3>Brush Size</h3>
+              <div class="row">
+                <div class="brush-size-description input-description">
+                  <span class="minus">&minus;</span
+                  ><span class="plus">&#43;</span>
+                </div>
+                <input
+                  id="brushSizeField"
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="20"
+                />
+              </div>
+            </div>
+            <div class="section">
+              <h3>Color Picker</h3>
+              <div class="color-picker">
+                <div class="row">
+                  <div class="input-description">Hue</div>
+                  <div class="gradient hue-gradient"></div>
+                  <input id="hue-range-slider" type="range" min="0" max="360" />
+                </div>
+                <div class="row">
+                  <div class="input-description">Saturation</div>
+                  <div id="saturation-gradient" class="gradient"></div>
+                  <input
+                    id="saturation-range-slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+                <div class="row">
+                  <div class="input-description">Luminosity</div>
+                  <div id="luminosity-gradient" class="gradient"></div>
+                  <input
+                    id="luminosity-range-slider"
+                    type="range"
+                    min="0"
+                    max="100"
+                  />
+                </div>
+              </div>
+              <div id="color-result"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="canvas-container">
+        <canvas id="myCanvas"></canvas>
+      </div>
+    </div>
+    <script src="bundle.js"></script>
+  </body>
+</html>

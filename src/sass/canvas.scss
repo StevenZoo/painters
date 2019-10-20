@@ -1,0 +1,17 @@
+canvas {
+  display: inline-block;
+  cursor: crosshair;
+  vertical-align: middle;
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+
+#canvas-container {
+  @include animate-width-transition;
+
+  text-align: center;
+  width: calc(100vw - #{$sidebar-width-lower-bound});
+  height: 100vh;
+}

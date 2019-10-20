@@ -1,0 +1,39 @@
+$sidebar-anchor-width: 66px;
+$sidebar-width-lower-bound: $sidebar-anchor-width;
+$sidebar-width-upper-bound: 300px;
+$sidebar-padding: 60px;
+$transition-time: 0.4s;
+
+$tablet-breakpoint: 800px;
+$lower-vertical-slider-breakpoint: 240px;
+$upper-vertical-slider-breakpoint: 600px;
+
+@mixin animate-width-transition {
+  transition: $transition-time;
+  transition-property: width;
+}
+
+@mixin animate-opacity-transition {
+  transition: $transition-time;
+  transition-property: opacity;
+}
+
+@mixin toggle-off {
+  @include animate-opacity-transition;
+  opacity: 0;
+  input {
+    pointer-events: none;
+  }
+}
+
+@mixin toggle-on {
+  @include animate-opacity-transition;
+  opacity: 1;
+  input {
+    pointer-events: auto;
+  }
+}
+
+@mixin vertical-slider-placement-util($width) {
+  transform-origin: $width / 2 $width / 2;
+}

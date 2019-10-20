@@ -1,0 +1,61 @@
+@media (max-width: $tablet-breakpoint) {
+  #sidebar-container {
+    width: $sidebar-width-lower-bound;
+    overflow-y: hidden;
+  }
+
+  #sidebar-content {
+    @include toggle-off;
+  }
+
+  .mobile-color-picker {
+    @include toggle-on;
+  }
+  
+}
+
+@media  (max-height: $tablet-breakpoint) {
+  .sidebar-core-content {
+    input {
+      padding: 6px 0;
+    }
+
+    .section {
+      padding-bottom: 12px;
+
+      &:last-child {
+        padding: 0;
+      }
+    }
+
+    .tools button {
+      padding: 4px;
+    }
+
+    h3 {
+      font-size: 1.1875rem;
+    }
+
+    .brush-size-description {
+      height: 12px;
+      margin-bottom: 4px;
+    }
+  }
+
+  #color-result {
+    height: 140px;
+    width: 140px;
+    margin: 12px auto 0;
+  }
+
+  .color-picker {
+    .gradient {
+      height: 12px;
+      margin: 4px 0;
+    }
+
+    .hue-gradient {
+      height: 18px;
+    }
+  }
+}
