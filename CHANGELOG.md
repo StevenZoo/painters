@@ -15,7 +15,7 @@
 ### Fixed
 - Support styling for range inputs across different browsers
 
-## 2019=08-25
+## 2019-08-25
 ### Added
 - More responsive design to accomodate mobile devices and tablets
 - Better support for devices with touch screens
